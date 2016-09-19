@@ -3,4 +3,4 @@
 CURRENT=$(PWD)
 cd ~/.dotfiles
 git pull
-cd $(CURRENT)
+cd $CURRENT
