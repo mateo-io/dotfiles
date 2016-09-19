@@ -1,0 +1,8 @@
+#!/bin/bash
+DUDE=$(pwd)
+cd ~/.dotfiles
+git add -A
+git commit -m"default commit msg"
+git push origin master
+cd $DUDE
+

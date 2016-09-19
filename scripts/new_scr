@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# $1: Name of the script
+# $2: path of the script inside /scripts folder
+
+COOL=$(pwd)
+cd ~/.dotfiles/scripts
+
+#If env variable not empty, create dir
+if [ ! -z "$2"]; then
+  mkdir "$2*"
+  cd "$2*"
+fi
+
+touch "$1"
+#Create symbolic link in ~/bin
+ln -s ."$1" ~/bin/"$1"
+
+#Add it to .bashrc? To implement
+
+cd $(COOL)

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+CURRENT=$(PWD)
+cd ~/.dotfiles
+git pull
+cd $(CURRENT)

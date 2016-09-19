@@ -1,0 +1,27 @@
+#!/bin/bash
+
+if [ ! -z "$1"]; then
+cd ~/
+git pull "$1"
+rm .bashrc
+rm .vimrc
+rm -drf /.vim
+rm .tmux.conf
+
+fi
+
+#Create links for config files
+ln -s /.dotfiles/.vim .vim
+ln -s /.dotfiles/.bashrc .bashrc
+ln -s /.dotfiles/.tmux.conf .tmux.conf
+
+#Create links for scripts
+cd ~/bin
+ln -s /.dotfiles/scripts/backup backup
+ln -s /.dotfiles/scripts/backup_reverse backup_pull
+ln -s /.dotfiles/scripts/django django
+ln -s /.dotfiles/scripts/selenium selenium
+ln -s /.dotfiles/scripts/new_scr
+ln -s /.dotfiles/scripts/setup_dotfiles
+
+

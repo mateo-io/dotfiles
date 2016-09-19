@@ -1,0 +1,3 @@
+#!bin/bash
+cd ~/work/selenium_test
+pyenv activate selenium_test
