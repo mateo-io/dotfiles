@@ -1,8 +1,7 @@
 let mapleader = " "
 
 "CLIPBOARD"
-set clipboard=unnamedplus
-noremap <Leader>v "*p
+noremap <Leader>v "+p
 vmap <Leader>c "+y
 
 "SET SHORTCUTS"
@@ -22,6 +21,7 @@ set list listchars=tab:»·,trail:·,nbsp:·
 set relativenumber
 set number
 
+let delimitMate_expand_cr = 1
 "
 "Ctr + l to create space between lines
 imap <C-l> <CR><Esc>O
@@ -83,7 +83,6 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 
-let delimitMate_expand_cr = 1
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
