@@ -1,5 +1,9 @@
 let mapleader = " "
 
+set swapfile
+set dir=~/tmp
+
+
 "CLIPBOARD"
 noremap <Leader>v "+p
 vmap <Leader>c "+y
@@ -21,7 +25,6 @@ set list listchars=tab:»·,trail:·,nbsp:·
 set relativenumber
 set number
 
-let delimitMate_expand_cr = 1
 "
 "Ctr + l to create space between lines
 imap <C-l> <CR><Esc>O
@@ -97,8 +100,7 @@ Plugin 'VundleVim/Vundle.vim'
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
 
-Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx'
+Plugin 'sheerun/vim-polyglot'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/syntastic'
@@ -106,12 +108,17 @@ Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'tpope/vim-commentary'
 Plugin 'Raimondi/delimitMate'
 
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required:
 
 syntax on
 syntax enable
+
+let delimitMate_expand_cr = 1
+let g:polyglot_disabled = ['php']
+au BufReadPost *.php set syntax=html
 
 " Color scheme (terminal)
 let g:solarized_termcolors=256
