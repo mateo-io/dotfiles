@@ -1,8 +1,12 @@
 let mapleader = " "
 
 set swapfile
-set dir=~/tmp
+set backupdir=./.backup,.,/tmp
+set directory=.,./.backup,/tmp
 
+
+" qb for changing tabs for two spaces "
+map <Leader>qb :%s/\t/  /g<CR>
 
 "CLIPBOARD"
 noremap <Leader>v "+p
