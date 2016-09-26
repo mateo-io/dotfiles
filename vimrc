@@ -1,8 +1,7 @@
 let mapleader = " "
 
-set swapfile
-set backupdir=./.backup,.,/tmp
-set directory=.,./.backup,/tmp
+set noswapfile
+set nobackup
 
 
 " qb for changing tabs for two spaces "
