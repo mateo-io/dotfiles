@@ -38,7 +38,7 @@ map <C-l> <CR><Esc>O
 
 " Setup some default ignores CtrP
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/](\.(git|hg|svn)|\_site)$',
+  \ 'dir':  '\v[\/](\.(git|hg|svn|)|\_site|node_modules)$',
   \  'file': '\v\.(exe|so|dll|class|png|jpg|jpeg)$',
   \}
 
