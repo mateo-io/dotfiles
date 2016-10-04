@@ -1,13 +1,14 @@
 #!/bin/bash
 
-
 #Have a virtualenv for different projects
+PROJECT=${1:-tyre}
 cd ~/
-cd ~/projects/"$1"
-pyenv activate "$1"
+cd ~/projects/"$PROJECT"/src
+pyenv activate "$PROJECT"
 . ~/.bashrc
 tmux -2 new-session -d 'vim'
 tmux new-window -n console
+tmux new-window -n webpack 'npm run dev'
 tmux new-window -n server 'python manage.py runserver'
 tmux select-window -t :1
 tmux -2 attach-session -d

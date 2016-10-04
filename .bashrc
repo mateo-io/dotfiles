@@ -120,12 +120,14 @@ if ! shopt -oq posix; then
   fi
 fi
 
+alias rebackup=". ~/bin/backup_reverse"
 alias backup=". ~/bin/backup"
 alias tset=". ~/bin/tsetup"
 alias proj=". ~/bin/django"
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 alias tmux='tmux -2'
+alias blog="cd ~/projects/mateom; pyenv actiavte mateom"
 
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 # virtualenv
 export WORKON_HOME=~/virtualenvs
 
@@ -144,7 +146,7 @@ if [ -n "$VIRTUAL_ENV" ]; then
 export PATH="/usr/local/heroku/bin:$PATH"
 alias clip="xclip -sel clipboard"
 alias capz="setxkbmap -option caps:ctrl_modifier"
-
-
+alias vimr="vim -R"
+alias tree="tree -I 'node_modules|static_dist|staticfiles'"
 
 export PS1="\${debian_chroot:+(\$debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
