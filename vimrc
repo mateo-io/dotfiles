@@ -42,11 +42,14 @@ let g:ctrlp_custom_ignore = {
       \  'file': '\v\.(exe|so|dll|class|png|jpg|jpeg)$',
       \}
 
-let g:ctrlp_working_path_mode = 0
+"let g:ctrlp_working_path_mode = 2
+" map <C-p> :CtrlPRoot<CR>
+" map <Leader>p :CtrlP<CR>
 
 " Security
 set modelines=0
 
+let g:ctrlp_cmd='CtrlP :pwd'
 
 " Show file stats
 set ruler
