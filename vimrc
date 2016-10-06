@@ -42,6 +42,7 @@ let g:ctrlp_custom_ignore = {
       \  'file': '\v\.(exe|so|dll|class|png|jpg|jpeg)$',
       \}
 
+let g:ctrlp_working_path_mode = 0
 
 " Security
 set modelines=0
@@ -89,6 +90,19 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 map <C-n> :NERDTreeToggle<CR>
+
+
+"Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+let g:syntastic_javascript_checkers = ['eslint']
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
