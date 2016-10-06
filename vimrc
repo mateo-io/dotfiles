@@ -49,7 +49,7 @@ let g:ctrlp_custom_ignore = {
 " Security
 set modelines=0
 
-let g:ctrlp_cmd='CtrlP :pwd'
+let g:ctrlp_cmd='CtrlP pwd'
 
 " Show file stats
 set ruler
