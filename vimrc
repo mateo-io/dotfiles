@@ -49,7 +49,8 @@ let g:ctrlp_custom_ignore = {
 " Security
 set modelines=0
 
-let g:ctrlp_cmd='CtrlP pwd'
+let g:ctrlp_cmd='CtrlPRoot'
+let JSHintUpdateWriteOnly=1
 
 " Show file stats
 set ruler
@@ -102,7 +103,6 @@ set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 let g:syntastic_javascript_checkers = ['eslint']
@@ -127,7 +127,6 @@ Plugin 'scrooloose/syntastic'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'tpope/vim-commentary'
 Plugin 'Raimondi/delimitMate'
-Plugin 'mhinz/vim-startify'
 Plugin 'mattn/emmet-vim'
 Plugin 'othree/html5.vim'
 Plugin 'MarcWeber/vim-addon-mw-utils'
@@ -135,8 +134,8 @@ Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'itchyny/lightline.vim'
-
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 
 " All of your Plugins must be added before the following line
@@ -154,3 +153,5 @@ au BufReadPost *.php set syntax=html
 let g:solarized_termcolors=256
 colorscheme solarized
 set background=light
+
+let g:airline_theme='solarized'
