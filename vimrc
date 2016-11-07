@@ -38,7 +38,7 @@ map <C-l> <CR><Esc>O
 
 " Setup some default ignores CtrP
 let g:ctrlp_custom_ignore = {
-      \ 'dir':  '\v[\/](\.(git|hg|svn|)|\_site|node_modules)$',
+      \ 'dir':  '\v[\/](\.(git|hg|svn|)|\_site|node_modules|bower_components)$',
       \  'file': '\v\.(exe|so|dll|class|png|jpg|jpeg)$',
       \}
 
@@ -136,7 +136,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-
+Plugin 'elzr/vim-json'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
