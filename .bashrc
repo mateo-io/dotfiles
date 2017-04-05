@@ -123,10 +123,13 @@ fi
 alias rebackup=". ~/bin/backup_reverse"
 alias backup=". ~/bin/backup"
 alias tset=". ~/bin/tsetup"
-alias proj=". ~/bin/django"
+alias proj=". ~/.dotfiles/scripts/nodejs"
+alias songs=". ~/bin/django"
 alias tmux='tmux -2'
 alias blog="cd ~/projects/mateom; pyenv actiavte mateom"
 
+PATH=$PATH:$HOME/.gem/bin
+export GEM_HOME=$HOME/.gem
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 # virtualenv
 export WORKON_HOME=~/virtualenvs
@@ -150,3 +153,8 @@ alias vimr="vim -R"
 alias tree="tree -I 'node_modules|static_dist|staticfiles'"
 
 export PS1="\${debian_chroot:+(\$debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
+
+export GOROOT=$HOME/go
+export GOPATH=$HOME/projects/golang
+export PATH=$PATH:$GOROOT/bin
+xinput disable 9

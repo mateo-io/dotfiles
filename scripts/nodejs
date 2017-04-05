@@ -1,0 +1,11 @@
+#!/bin/bash
+
+#Have a virtualenv for different projects
+cd ~/arbeiten/api-vs/
+. ~/.bashrc
+tmux -2 new-session -d 'vim'
+tmux new-window -n console
+tmux new-window -n docker 'docker-compose up'
+tmux select-window -t :1
+tmux -2 attach-session -d
+

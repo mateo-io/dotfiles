@@ -1,4 +1,11 @@
-let mapleader = " "
+filetype on
+filetype plugin on
+filetype indent on
+set clipboard=unnamed
+let mapleader = "\<Space>"
+let maplocalleader = "\<Space>"
+
+noremap = <Space> <nop>
 
 set noswapfile
 set nobackup
@@ -8,8 +15,8 @@ set nobackup
 map <Leader>qb :%s/\t/  /g<CR>
 
 "CLIPBOARD"
-noremap <Leader>v "+p
-vmap <Leader>c "+y
+noremap <leader>v "+p
+vmap <leader>c "+y
 
 "SET SHORTCUTS"
 map ,t <Esc>:bd<CR>
